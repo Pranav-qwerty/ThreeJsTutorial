@@ -1,0 +1,43 @@
+{
+	// Place your threejs-tutorial workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Boiler Plate code": {
+		"scope": "javascript,typescript",
+		"prefix": "Boiler Plate code",
+		"body": [
+			"import * as THREE from 'three';",
+			"",
+			"let scene, camera, renderer;",
+			"",
+			"",
+			"let init = function () {",
+			"\tscene = new THREE.Scene();",
+			"\tscene.background = new THREE.Color(0xababab);",
+			"",
+			"\tcamera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight,1,1000);",
+			"",
+			"\trenderer = new THREE.WebGL1Renderer();",
+			"\trenderer.setSize(window.innerWidth, window.innerHeight);",
+			"",
+			"\tdocument.body.appendChild(renderer.domElement);",
+			"};",
+			"",
+			"let mainLoop = function () {",
+			"\trenderer.render(scene, camera);",
+			"\trequestAnimationFrame(mainLoop);",
+			"};",
+			"",
+			"",
+			"init();",
+			"",
+			"export default mainLoop;",
+			"",
+		],
+		"description": "Starter template"
+	}
+}
